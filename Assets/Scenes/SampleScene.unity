@@ -145,7 +145,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 280647902}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &280647904
 Camera:
   m_ObjectHideFlags: 0
@@ -526,7 +526,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &963194227
 Camera:
   m_ObjectHideFlags: 0
@@ -779,7 +779,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9b06f6b6785904134b29a0592f93cda6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -823,6 +823,7 @@ MonoBehaviour:
   Brush: {fileID: 912046184937219605, guid: 03c718b383a6b45769e99113bcbd725c, type: 3}
   BrushSize: 0.1
   RTexture: {fileID: 8400000, guid: 63f08b20b7f164d1391d27a103581b16, type: 2}
+  Blackboard: {fileID: 8400000, guid: a16a33a5cf2dd48e591aa0c9194a30bf, type: 2}
 --- !u!1 &2030962037
 GameObject:
   m_ObjectHideFlags: 0
