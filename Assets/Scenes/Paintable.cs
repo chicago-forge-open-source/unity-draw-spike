@@ -12,7 +12,8 @@ public class Paintable : MonoBehaviour
     public RenderTexture RTexture;
 
     private bool[,] bitmap = new bool[_texture_size, _texture_size];
-    private static int _texture_size = 100;
+    private static int _texture_size = 50;
+    private static int _shift_right = _texture_size / 2;
 
     // Update is called once per frame
     void Update()
@@ -29,8 +30,8 @@ public class Paintable : MonoBehaviour
             if (Physics.Raycast(Ray, out hit))
             {
                 Vector3 hitVector = hit.point;
-                int x = (int) (Math.Round(hitVector.x) + 50);
-                int z = (int) (Math.Round(hitVector.z) + 50);
+                int x = (int) (Math.Round(hitVector.x) + 50) * _texture_size / 100 ;
+                int z = (int) (Math.Round(hitVector.z) + 50) * _texture_size / 100 ;
                 if (x < _texture_size && x >= 0 && z < _texture_size && z >= 0)
                 {
                     Debug.Log("hi!!" + x + " " + z);
@@ -61,7 +62,7 @@ public class Paintable : MonoBehaviour
             for (int x = 0; x < texture.width; x++)
             {
                 var bit = bitmap[_texture_size - 1 - x, _texture_size - 1 - y];
-                Color color = (bit ? Color.black : Color.white);
+                Color color = (bit ? Color.white : Color.black);
                 texture.SetPixel(x, y, color);
             }
         }
